@@ -5,6 +5,12 @@ slam_gmapping
 
 <launch>
 
+
+  #### clock server and rplidar node #############################
+
+  <include file="bringup/clock_server.launch" />
+  <include file="bringup/rplidar.launch" />
+
   #### set up data playback from bag #############################
 
   <param name="/use_sim_time" value="true"/>
@@ -14,12 +20,12 @@ slam_gmapping
   #### publish an example base_link -> laser transform ###########
 
   <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser" 
-    args="0.0 0.0 0.0 0.0 0.0 0.0 /base_link /laser 40" />
+    args="0.0 0.0 0.05 0.0 0.0 0.0 /base_link /laser 40" />
 
   #### start rviz ################################################
 
   <node pkg="rviz" type="rviz" name="rviz" 
-    args="-d ~/Desktop/LucyLaunchfiles/demo_gmapping.rviz"/>
+    args="-d /home/felix/Desktop/LucyLaunchfiles/rviz/LucyGmappingv1.rviz"/>
 
   #### start the laser scan_matcher ##############################
 

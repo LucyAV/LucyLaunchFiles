@@ -1,0 +1,3 @@
+<launch>
+	<node pkg="rostopic" type="rostopic" name="clock_publisher" args="pub -s -r 1000 /clock rosgraph_msgs/Clock 'now'" output="screen"/>
+</launch>
