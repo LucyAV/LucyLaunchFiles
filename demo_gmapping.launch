@@ -9,7 +9,7 @@ slam_gmapping
   #### clock server and rplidar node #############################
 
   <include file="bringup/clock_server.launch" />
-  <include file="bringup/rplidar.launch" />
+  <!-- <include file="bringup/rplidar.launch" /> -->
 
   #### set up data playback from bag #############################
 
