@@ -1,11 +1,10 @@
 <launch>
 
 	<node pkg="move_base" type="move_base" respawn="false" name="move_base" output="screen">
-  	  	<rosparam file="~/Desktop/LucyLaunchFiles/params/costmap_common_params.yaml" command="load" ns="global_costmap" />
-  	 	<rosparam file="~/Desktop/LucyLaunchFiles/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
-  		<rosparam file="~/Desktop/LucyLaunchFiles/params/local_costmap_params.yaml" command="load" />
-  		<rosparam file="~/Desktop/LucyLaunchFiles/params/global_costmap_params.yaml" command="load" />
-  		<rosparam file="~/Desktop/LucyLaunchFiles/params/teb_local_planner_params.yaml" command="load" />
+  	 	<rosparam file="/home/felix/Desktop/LucyLaunchfiles/params/costmap_common_params.yaml" command="load" ns="local_costmap" />
+  		<rosparam file="/home/felix/Desktop/LucyLaunchfiles/params/local_costmap_params.yaml" command="load" />
+  		<rosparam file="/home/felix/Desktop/LucyLaunchfiles/params/global_costmap_params.yaml" command="load" />
+  		<rosparam file="/home/felix/Desktop/LucyLaunchfiles/params/teb_local_planner_params.yaml" command="load" />
 
 		<param name="base_global_planner" value="global_planner/GlobalPlanner" />
 		<param name="planner_frequency" value="1.0" />
@@ -23,7 +22,7 @@
 	</node>
 
 	<node pkg="amcl" type="amcl" name="amcl" output="screen">
-		<rosparam file="~/Desktop/LucyLaunchFiles/params/amcl_params.yaml" command="load" />
+		<rosparam file="/home/felix/Desktop/LucyLaunchfiles/params/amcl_params.yaml" command="load" />
 
 	        <param name="initial_pose_x"            value="2"/>
 		<param name="initial_pose_y"            value="2"/>
@@ -31,6 +30,6 @@
 	</node>
 
 	  <!--  **************** Visualisation ****************  -->
-	  <node name="rviz" pkg="rviz" type="rviz" args="-d ~/Desktop/LucyLaunchFiles/params/rviz_navigation.rviz"/>
+	  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/felix/Desktop/LucyLaunchFiles/params/rviz_navigation.rviz"/>
 
 </launch>

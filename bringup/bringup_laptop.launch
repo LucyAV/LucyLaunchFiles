@@ -4,7 +4,7 @@ slam_gmapping
 -->
 
 <launch>
-  <include file="bringup/clock_server.launch" />
+  <include file="/home/felix/Desktop/LucyLaunchfiles/bringup/clock_server.launch" />
   <!--<param name="/use_sim_time" value="true"/>-->
 
   <!-- taken from laser_scan_matcher demo -->
