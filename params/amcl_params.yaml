@@ -8,7 +8,7 @@ global_frame_id: "map"
 odom_model_type: "diff"
 odom_alpha5: 0.1
 gui_publish_rate: 10.0
-laser_max_beams: 60
+laser_max_beams: 200 ## default: 60
 laser_max_range: 12.0
 min_particles: 500
 max_particles: 2000
