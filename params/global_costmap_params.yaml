@@ -4,6 +4,8 @@ global_costmap:
   update_frequency: 1.0
   publish_frequency: 0.5
   static_map: true
+  footprint: [[-0.18,-0.125],[0.15,-0.125],[0.15,0.125],[-0.18,0.125]]
+
  
   transform_tolerance: 0.5
   plugins:
