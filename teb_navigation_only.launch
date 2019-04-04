@@ -29,7 +29,4 @@
 		<param name="initial_pose_a"            value="0"/>
 	</node>
 
-	  <!--  **************** Visualisation ****************  -->
-	  <node name="rviz" pkg="rviz" type="rviz" args="-d /home/felix/Desktop/LucyLaunchFiles/params/rviz_navigation.rviz"/>
-
 </launch>
